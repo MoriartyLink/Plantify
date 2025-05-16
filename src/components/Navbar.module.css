@@ -1,0 +1,129 @@
+.navbar {
+    position: sticky;
+    top: 10px; /* Adds padding from top */
+    z-index: 100;
+    background: rgba(46, 125, 50, 0.729); /* Semi-transparent */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    color: white;
+    display: flex;
+    align-items: right;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+    border-radius: 50px; /* Rounded corners */
+    margin: 0 2rem; /* Prevents touching edges */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    font-family: 'Poppins', sans-serif; /* Modern font */
+  }
+  
+  /* Hover effect for entire navbar */
+  .navbar:hover {
+    background: rgba(46, 125, 50, 0.847);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .icon {
+    font-size: 1.75rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo:hover .icon {
+    transform: rotate(15deg);
+  }
+  
+  .brand {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    position: relative;
+  }
+  
+  /* Underline animation */
+  .brand::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #c8e6c9;
+    transition: width 0.3s ease;
+  }
+  
+  .brand:hover::after {
+    width: 100%;
+  }
+  
+  .navLinks {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+  }
+  
+  /* Modern hover effect */
+  .link::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #c8e6c9;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .link:hover::before {
+    width: 100%;
+    opacity: 1;
+  }
+  
+  .cartIcon {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+  }
+  
+  .cartIcon:hover {
+    color: #c8e6c9;
+    transform: scale(1.1);
+  }
+  
+  .badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background: linear-gradient(135deg, #d32f2f, #c62828);
+    color: white;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    padding: 3px 7px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .cartIcon:hover .badge {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
